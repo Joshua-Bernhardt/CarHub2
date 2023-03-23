@@ -1,3 +1,7 @@
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography;
+using System.Text;
+
 namespace CarHub.Service.Repository.UserRepository
 {
     public class DummyUserRepository : IUserRepository
@@ -14,7 +18,8 @@ namespace CarHub.Service.Repository.UserRepository
                     Forename = "Forename",
                     Surname = "Surname",
                     MiddleName = "Middle",
-                    VehicleRegistration = "GL17OOD"
+                    VehicleRegistration = "GL17OOD",
+                    Password = ""
                 }
             };
         }
@@ -23,6 +28,8 @@ namespace CarHub.Service.Repository.UserRepository
         {
             if (user == null) throw new ArgumentNullException(nameof(user));
             if (string.IsNullOrEmpty(user.VehicleRegistration)) throw new InvalidOperationException();
+            if (string.IsNullOrEmpty(user.Email)) throw new InvalidOperationException();
+            if (string.IsNullOrEmpty(user.Password)) throw new InvalidOperationException();
 
             user.Id = Guid.NewGuid();
             _users.Add(user);
@@ -35,11 +42,12 @@ namespace CarHub.Service.Repository.UserRepository
             return true;
         }
 
-        public Model.User.User GetUser(Guid userId)
+        public Model.User.User GetUser(string email, string password)
         {
-            if (userId == null || userId == Guid.Empty) throw new ArgumentNullException(nameof(userId));
+            if (string.IsNullOrEmpty(email)) throw new ArgumentNullException(nameof(email));
+            if (string.IsNullOrEmpty(password)) throw new ArgumentNullException(nameof(password));
 
-            return _users.FirstOrDefault(x => x.Id == userId);
+            return _users.FirstOrDefault(x => x.Email == email && x.Password == password);
         }
     }
 }

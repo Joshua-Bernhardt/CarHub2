@@ -13,11 +13,10 @@ namespace CarHub.Service.Model.User
 
         public string Surname { get; set; }
 
-        public Guid VehicleId { get; set; }
-
         public string VehicleRegistration { get; set; }
 
         public string Email {get; set;}
 
+        public string Password {get; set;}
     }
 }

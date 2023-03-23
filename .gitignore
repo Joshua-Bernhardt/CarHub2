@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 .vscode/launch.json
 .vscode/tasks.json
+CarHub.Service.Repository.User/obj/project.nuget.cache
+CarHub.Service.Repository.User/obj/project.nuget.cache

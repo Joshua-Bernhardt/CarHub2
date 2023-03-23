@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using CarHub.Service.Model.User;
 using CarHub.Service.Model.User.Get;
 using CarHub.Service.Model.User.Post;
@@ -23,7 +25,8 @@ namespace CarHub.Service.Provider
                 MiddleName = request.MiddleName,
                 Surname = request.Surname,
                 Email = request.Email,
-                VehicleRegistration = request.VehicleRegistration
+                VehicleRegistration = request.VehicleRegistration,
+                Password = Encrypt(request.Password)
             };
 
             if (_repository.CreateUser(user))
@@ -53,7 +56,7 @@ namespace CarHub.Service.Provider
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
 
-            var user = _repository.GetUser(request.UserId);
+            var user = _repository.GetUser(request.Email, Encrypt(request.Password));
 
             if (user == null)
             {
@@ -68,6 +71,11 @@ namespace CarHub.Service.Provider
                 StatusCode = System.Net.HttpStatusCode.OK,
                 User = user
             };
+        }
+
+        private static string Encrypt(string inputString)
+        {
+            return SHA256.HashData(Encoding.UTF8.GetBytes(inputString)).ToString();
         }
     }
 }

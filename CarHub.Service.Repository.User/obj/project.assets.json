@@ -91,34 +91,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joshb\\.nuget\\packages\\": {}
+    "/Users/BernJo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\CarHub2\\CarHub.Service.Repository.User\\CarHub.Service.Repository.User.csproj",
+      "projectUniqueName": "/Users/BernJo/Documents/Personal Projects/CarHub/CarHub2/CarHub.Service.Repository.User/CarHub.Service.Repository.User.csproj",
       "projectName": "CarHub.Service.Repository.User",
-      "projectPath": "C:\\dev\\CarHub2\\CarHub.Service.Repository.User\\CarHub.Service.Repository.User.csproj",
-      "packagesPath": "C:\\Users\\joshb\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\CarHub2\\CarHub.Service.Repository.User\\obj\\",
+      "projectPath": "/Users/BernJo/Documents/Personal Projects/CarHub/CarHub2/CarHub.Service.Repository.User/CarHub.Service.Repository.User.csproj",
+      "packagesPath": "/Users/BernJo/.nuget/packages/",
+      "outputPath": "/Users/BernJo/Documents/Personal Projects/CarHub/CarHub2/CarHub.Service.Repository.User/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\joshb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/BernJo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\dev\\CarHub2\\CarHub.Service.Model\\CarHub.Service.Model.csproj": {
-              "projectPath": "C:\\dev\\CarHub2\\CarHub.Service.Model\\CarHub.Service.Model.csproj"
+            "/Users/BernJo/Documents/Personal Projects/CarHub/CarHub2/CarHub.Service.Model/CarHub.Service.Model.csproj": {
+              "projectPath": "/Users/BernJo/Documents/Personal Projects/CarHub/CarHub2/CarHub.Service.Model/CarHub.Service.Model.csproj"
             }
           }
         }
@@ -148,7 +146,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }

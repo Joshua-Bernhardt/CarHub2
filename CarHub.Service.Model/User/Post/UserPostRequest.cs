@@ -19,5 +19,8 @@ namespace CarHub.Service.Model.User.Post
 
         [Required]
         public string VehicleRegistration { get; set; }
+
+        [Required]
+        public string Password {get; set;}
     }
 }

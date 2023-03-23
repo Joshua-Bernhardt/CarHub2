@@ -12,9 +12,9 @@ namespace CarHub.Service.Repository.VehicleRepository
             {
                 new Vehicle()
                 {
-                    Registration = "GL17OOD",
-                    Make = "Skoda",
-                    Model = "Fabia",
+                    Registration = "FA17XLP",
+                    Make = "Ford",
+                    Model = "Focus",
                     DateRegistered = new DateTime(2017, 5, 1),
                     MOTEntries = GetMOTEntries(),
                     ServiceEntries = GetServiceEntries()

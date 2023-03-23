@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5elH+GMi04EzzsgwPLNr8p4QQBRJq5LcGugLAFm7WEn5/4Ig3lz9Y8Dnv1/XOqu6ySFSYiLS7U0y+hMPoblgPA==",
+  "dgSpecHash": "BTovbQI08TIg3+b7qCBqfWq43EvnI/jpb2GwyuXIAKNaowRDHTSkVNc5aqTQSX8ZxfBLTAMoHQQ3BI69/UN6Xw==",
   "success": true,
-  "projectFilePath": "C:\\dev\\CarHub2\\CarHub.Service.Repository.User\\CarHub.Service.Repository.User.csproj",
+  "projectFilePath": "/Users/BernJo/Documents/Personal Projects/CarHub/CarHub2/CarHub.Service.Repository.User/CarHub.Service.Repository.User.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\joshb\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.3\\microsoft.aspnetcore.openapi.7.0.3.nupkg.sha512",
-    "C:\\Users\\joshb\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512"
+    "/Users/BernJo/.nuget/packages/microsoft.aspnetcore.openapi/7.0.3/microsoft.aspnetcore.openapi.7.0.3.nupkg.sha512",
+    "/Users/BernJo/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512"
   ],
   "logs": []
 }
