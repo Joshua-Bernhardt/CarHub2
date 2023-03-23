@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <ProjectReference Include="..\CarHub.Service.Model\CarHub.Service.Model.csproj"/>
+    <ProjectReference Include="..\CarHub.Service.Repository.User\CarHub.Service.Repository.User.csproj"/>
+    <ProjectReference Include="..\CarHub.Service.Repository.Vehicle\CarHub.Service.Repository.Vehicle.csproj"/>
+  </ItemGroup>
+
+</Project>
