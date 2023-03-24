@@ -55,8 +55,9 @@ namespace CarHub.Service.Provider
         public UserGetResponse GetUser(UserGetRequest request)
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
+            if (request.UserId == Guid.Empty) throw new InvalidOperationException();
 
-            var user = _repository.GetUser(request.Email, Encrypt(request.Password));
+            var user = _repository.GetUser(request.UserId);
 
             if (user == null)
             {
@@ -69,7 +70,11 @@ namespace CarHub.Service.Provider
             return new UserGetResponse()
             {
                 StatusCode = System.Net.HttpStatusCode.OK,
-                User = user
+                Forename = user.Forename,
+                MiddleName = user.MiddleName,
+                Surname = user.Surname,
+                Email = user.Email,
+                VehicleRegistration = user.VehicleRegistration
             };
         }
 

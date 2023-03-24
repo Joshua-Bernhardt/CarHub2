@@ -19,7 +19,8 @@ namespace CarHub.Service.Repository.UserRepository
                     Surname = "Surname",
                     MiddleName = "Middle",
                     VehicleRegistration = "GL17OOD",
-                    Password = ""
+                    Email = "dummy@email.com",
+                    Password = Encrypt("password")
                 }
             };
         }
@@ -42,12 +43,16 @@ namespace CarHub.Service.Repository.UserRepository
             return true;
         }
 
-        public Model.User.User GetUser(string email, string password)
+        public Model.User.User GetUser(Guid userId)
         {
-            if (string.IsNullOrEmpty(email)) throw new ArgumentNullException(nameof(email));
-            if (string.IsNullOrEmpty(password)) throw new ArgumentNullException(nameof(password));
+            if (userId == Guid.Empty) throw new InvalidOperationException(nameof(userId));
 
-            return _users.FirstOrDefault(x => x.Email == email && x.Password == password);
+            return _users.FirstOrDefault(x => x.Id == userId);
+        }
+
+        private static string Encrypt(string inputString)
+        {
+            return SHA256.HashData(Encoding.UTF8.GetBytes(inputString)).ToString();
         }
     }
 }

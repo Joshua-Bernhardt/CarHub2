@@ -8,12 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.4" />
   </ItemGroup>
 
     <ItemGroup>
     <ProjectReference Include="..\CarHub.Service.Model\CarHub.Service.Model.csproj"/>
     <ProjectReference Include="..\CarHub.Service.Repository.User\CarHub.Service.Repository.User.csproj"/>
     <ProjectReference Include="..\CarHub.Service.Repository.Vehicle\CarHub.Service.Repository.Vehicle.csproj"/>
+    <ProjectReference Include="..\CarHub.Service.Validator\CarHub.Service.Validator.csproj"/>
   </ItemGroup>
 
 </Project>

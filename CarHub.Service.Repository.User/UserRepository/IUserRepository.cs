@@ -6,6 +6,6 @@ namespace CarHub.Service.Repository.UserRepository
 
         bool EditUser(Model.User.User user);
 
-        Model.User.User GetUser(string email, string password);
+        Model.User.User GetUser(Guid userId);
     }
 }
